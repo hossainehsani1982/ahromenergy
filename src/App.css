@@ -1,54 +1,11 @@
 .App {
   display: flex;
   flex-direction: column;
-  height: 400vh;
+  flex-wrap: wrap;
   margin: 15px;
   direction: rtl;
 }
 
-/* styles.css */
-
-.Header {
-  padding: 20px;
-  text-align: center;
-  direction: rtl;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.Header h1 {
-  font-size: 6rem; /* Adjust font size */
-}
-
-.Header-nav {
-  display: flex;
-  flex: space-around;
-  align-items: center;
-  gap: 20px; /* Add spacing between nav items */
-}
-
-
-
-.Body {
-  flex: 1 1 80%;
-  width: 97%;
-  background-color: #f0f0f0;
-  padding: 20px;
-  right: 0;
-  text-align: right;
-  direction: rtl;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
 .Footer {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

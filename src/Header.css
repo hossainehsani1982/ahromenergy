@@ -1,0 +1,33 @@
+.header-container {
+  padding: 20px;
+  direction: rtl;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.header-title {
+  font-size: 6rem;
+  width: 100%;
+  transition: font-size 0.3s ease;
+}
+
+.header-navigation {
+  display: flex;
+  width: 100%;
+  box-shadow: none;
+  justify-content: space-around;
+  gap: 20px; /* Add spacing between nav items */
+}
+
+@media screen and (max-width: 768px) {
+  .header-title {
+    font-size: 3rem;
+  }
+  .header-navigation {
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 15px;
+  }      
+}

@@ -1,8 +1,9 @@
 import './Home.css';
+import './Body.css';
 
 function Home() {
   return (
-    <div>
+    <div className="imageContainer">
       <div className="imageSlider"></div>
       <div className="textContent">
         <h1>Welcome to the home page!</h1>
@@ -11,5 +12,6 @@ function Home() {
     </div>
   );
 }
+
 
 export default Home;
