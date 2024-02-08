@@ -1,0 +1,43 @@
+.imageSlider{
+    background-image: url(./rajayiPP.jpg); 
+    background-size: 100% 100%;
+    width: 97%;
+    height: 400px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    margin-top: 30px;
+    box-shadow: 1px 1px 10px 5px rgba(177, 37, 37, 0.1);
+    animation: slider 10s infinite alternate-reverse;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@keyframes slider{
+    0%{
+        background-image: url(./rajayiPP.jpg);
+    }
+    25%{
+        background-image: url(./rajayiPP2.jpg);
+    }
+    50%{
+        background-image: url(./rajayiPP3.jpg);
+    }
+    75%{
+        background-image: url(./rajayiPP.jpg);
+    }
+}
+
+.imageContainer {
+    position: relative;
+  }
+  
+  .textContent {
+    position: absolute;
+    top: 120%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1;
+  }

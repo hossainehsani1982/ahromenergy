@@ -1,38 +1,102 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  height: 400vh;
+  margin: 15px;
+  direction: rtl;
+}
+
+/* styles.css */
+
+.Header {
+  padding: 20px;
+  text-align: center;
+  direction: rtl;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.Header h1 {
+  font-size: 6rem; /* Adjust font size */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Header-nav {
+  display: flex;
+  flex: space-around;
+  align-items: center;
+  gap: 20px; /* Add spacing between nav items */
+}
+
+
+
+.Body {
+  flex: 1 1 80%;
+  width: 97%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  right: 0;
+  text-align: right;
+  direction: rtl;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.Footer {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Set your desired background color */
+  color: black;
+  text-align: center;
+  padding: 20px; /* Add some spacing around the content */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around; /* Spread navigation items evenly */
+  align-items: center; /* Vertically center items */
+
+}
+
+.nav-item {
+  color: black; /* Customize text color */
+  text-decoration: none; /* Remove default link underline */
+  
+}
+
+/* Add responsive styles for small screens */
+
+@media screen and (max-width: 768px) {
+  .Body {
+    width: 95%;
   }
-  to {
-    transform: rotate(360deg);
+  .Header {
+      flex-direction: column; /* Stack items vertically */
+  }
+
+  .Header-nav {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .Header h1{
+    font-size: 4rem;
+  }
+
+  p{
+    font-size: 0.7rem;
   }
 }
+
