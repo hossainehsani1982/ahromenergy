@@ -1,17 +1,18 @@
-.imageContainer {
+.homeContainer {
     position: relative;
     width: 100%; /* Ensure the container takes up the full width */
-    height: 500px; /* Adjust height as needed */
+    flex-wrap: wrap; /* Adjust height as needed */
+;
   }
   
   .imageSlider {
     background-image: url(./rajayiPP.jpg);
-    background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 350px;
     border-radius: 5px;
     box-shadow: 1px 1px 10px 5px rgba(177, 37, 37, 0.1);
-    animation: slider 10s infinite linear;
+    animation: slider 10s linear;
+    animation-iteration-count: infinite;
     object-fit: cover;
 }
       
@@ -49,4 +50,58 @@
   @media screen and (max-width: 768px) {
   
     }
+    .cardContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      flex-direction: row; /* Ensure cards are laid out horizontally */
+    }
+
+    .cardContainer h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 4rem;
+    }
+    
+    .cardContainer-card {
+      width: calc(30% - 20px); /* Adjust the width based on the number of cards per row */
+      /* Subtracting margin and padding from total width */
+      height: 100%;
+      border-radius: 5px;
+      box-shadow: 1px 1px 10px 5px rgba(177, 37, 37, 0.1);
+      margin: 10px 0;
+
+      
+    }
+    .cHeader {
+      width: 100%;
+      height: 40px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: rgb(247, 242, 246);
+      text-align: center;
+    }
+
+    .cardContainer-card h3{
+      width: 100%;
+      font-size: 2rem;
+    }
+    .cardContainer-card p {
+      width: 100px;
+     
+    }
+
+    .projectsContainer {
+      display: flex;
+      height: 400px;
+      background: linear-gradient(to right, rgb(252, 252, 252), rgb(126, 134, 172), rgb(252, 252, 252));
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      margin: 0px;
+      flex-direction: row; /* Ensure cards are laid out horizontally */
+    }
+    
 

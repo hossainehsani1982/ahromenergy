@@ -23,12 +23,20 @@ function Footer() {
 }
 
 
-
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Body />
+      <header>
+        <Header />
+      </header>
+      <body>
+        <Body />
+      </body>
+      <footer>
+  
+      </footer>
+      
+      
     </div>
   );
 }

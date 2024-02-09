@@ -1,6 +1,4 @@
 .App {
-  display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   margin: 15px;
   direction: rtl;
@@ -15,45 +13,10 @@
   padding: 20px; /* Add some spacing around the content */
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-around; /* Spread navigation items evenly */
-  align-items: center; /* Vertically center items */
-
-}
-
-.nav-item {
-  color: black; /* Customize text color */
-  text-decoration: none; /* Remove default link underline */
-  
-}
 
 /* Add responsive styles for small screens */
 
 @media screen and (max-width: 768px) {
-  .Body {
-    width: 95%;
-  }
-  .Header {
-      flex-direction: column; /* Stack items vertically */
-  }
-
-  .Header-nav {
-      flex-direction: column;
-      gap: 10px;
-  }
-
-  .nav-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .Header h1{
-    font-size: 4rem;
-  }
-
-  p{
-    font-size: 0.7rem;
-  }
+   
 }
 
