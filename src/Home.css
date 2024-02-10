@@ -1,107 +1,141 @@
 .homeContainer {
-    position: relative;
-    width: 100%; /* Ensure the container takes up the full width */
-    flex-wrap: wrap; /* Adjust height as needed */
-;
-  }
-  
+  position: relative;
+  width: 100%;
+  /* Ensure the container takes up the full width */
+  flex-wrap: wrap;
+  /* Adjust height as needed */
+  flex-direction: row;
+}
+
+.imageSlider {
+  background-image: url(./rajayiPP.jpg);
+  width: 100%;
+  height: 350px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 5px rgba(177, 37, 37, 0.1);
+  animation: slider 20s linear;
+  animation-iteration-count: infinite;
+  object-fit: cover;
+}
+
+.textContent {
+  position: relative;
+  bottom: 20px;
+  /* Adjust vertical positioning as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
   .imageSlider {
-    background-image: url(./rajayiPP.jpg);
+    height: 200px;
+    /* Adjust height for smaller screens */
+  }
+}
+
+
+@keyframes slider {
+  50% {
+    background-image: url(./rajayiPPwide.png);
+  }
+
+  100% {
+    background-image: url(./rajayiPP2wide.png);
+  }
+
+}
+
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch; /* Ensure all cards have the same height */
+  width: 100%;
+  flex-direction: row; /* Ensure cards are laid out horizontally */
+  transition: flex-direction 0.5s ease;
+}
+
+.cardContainer-card {
+  flex: 1;/* Make all cards grow to fill available space */
+  max-width: calc(30% - 20px);
+  /* Adjust the width based on the number of cards per row */
+  /* Subtracting margin and padding from total width */
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 5px rgba(177, 37, 37, 0.1);
+  margin: 10px 0;
+}
+
+.cHeader {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgb(247, 242, 246);
+  text-align: center;
+}
+
+.cardContainer-card h3 {
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.cardContainer-card p {
+  width: 90%;
+  margin-right: 10px;
+  text-align: justify;
+}
+
+.projectsContainer {
+  display: flex;
+  height: 400px;
+  background: linear-gradient(to right, rgb(252, 252, 252), rgb(126, 134, 172), rgb(252, 252, 252));
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+  flex-direction: column;
+  /* Stack items vertically */
+  margin: 0;
+}
+
+.projectsContainer h2 {
+  width: 100%;
+  transition: font-size 0.4s ease;
+  text-align: right;
+  margin: 10px;
+}
+
+.image-row {
+  width: 100%;
+  display: inherit;
+  /* Make the images display horizontally in a row */
+  justify-content: space-around;
+  /* Center the images horizontally within the container */
+  align-items: center;
+  /* Center the images vertically within the container */
+}
+
+@media screen and (max-width: 768px) {
+  .cardContainer{
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .cardContainer-card{
+    flex: 1;/* Make all cards grow to fill available space */
     width: 100%;
-    height: 350px;
+    max-width: calc(80% - 20px);
+    /* Adjust the width based on the number of cards per row */
+    /* Subtracting margin and padding from total width */
     border-radius: 5px;
     box-shadow: 1px 1px 10px 5px rgba(177, 37, 37, 0.1);
-    animation: slider 10s linear;
-    animation-iteration-count: infinite;
-    object-fit: cover;
-}
-      
-  .textContent {
-    position: relative;
-    bottom: 20px; /* Adjust vertical positioning as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 1;
+    margin: 10px 0;
+  
   }
-  
-  @media screen and (max-width: 768px) {
-    .imageSlider {
-      height: 200px; /* Adjust height for smaller screens */
-    }
+  .image-row{
+    flex-direction: column;
   }
-  
-
-@keyframes slider{
-    0%{
-        background-image: url(./rajayiPP.jpg);
-    }
-    25%{
-        background-image: url(./rajayiPP2.jpg);
-    }
-    50%{
-        background-image: url(./rajayiPP3.jpg);
-    }
-    75%{
-        background-image: url(./rajayiPP.jpg);
-    }
 }
-
-  @media screen and (max-width: 768px) {
-  
-    }
-    .cardContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      flex-direction: row; /* Ensure cards are laid out horizontally */
-    }
-
-    .cardContainer h2 {
-      width: 100%;
-      text-align: center;
-      font-size: 4rem;
-    }
-    
-    .cardContainer-card {
-      width: calc(30% - 20px); /* Adjust the width based on the number of cards per row */
-      /* Subtracting margin and padding from total width */
-      height: 100%;
-      border-radius: 5px;
-      box-shadow: 1px 1px 10px 5px rgba(177, 37, 37, 0.1);
-      margin: 10px 0;
-
-      
-    }
-    .cHeader {
-      width: 100%;
-      height: 40px;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      background-color: rgb(247, 242, 246);
-      text-align: center;
-    }
-
-    .cardContainer-card h3{
-      width: 100%;
-      font-size: 2rem;
-    }
-    .cardContainer-card p {
-      width: 100px;
-     
-    }
-
-    .projectsContainer {
-      display: flex;
-      height: 400px;
-      background: linear-gradient(to right, rgb(252, 252, 252), rgb(126, 134, 172), rgb(252, 252, 252));
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-      margin: 0px;
-      flex-direction: row; /* Ensure cards are laid out horizontally */
-    }
-    
-

@@ -5,12 +5,32 @@
 }
 
 
-.Footer {
+.footer-container {
+  padding: 20px;
+  direction: rtl;
+  height: 300px;
+  margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* Set your desired background color */
-  color: black;
+  border-radius: 10px;
+  position: relative;
+}
+
+.footer-container h3{
+  font-size: 1rem;
+  width: 100%;
   text-align: center;
-  padding: 20px; /* Add some spacing around the content */
+  transition: font-size 0.3s ease;
+  position: absolute; /* Position the element absolutely */
+  bottom: 0; /* Align the element to the bottom */
+}
+
+
+.footer-navigation {
+  display: flex;
+  width: 100%;
+  box-shadow: none;
+  justify-content: space-around;
+  gap: 20px; /* Add spacing between nav items */
 }
 
 

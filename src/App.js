@@ -8,16 +8,16 @@ import Body from './Body';
 
 function Footer() {
   return (
-      <footer className='Footer'>
-          <nav className='nav-container'>
-              <Link to='/' className='nav-item'>Home</Link>
-              <Link to='/about' className='nav-item'>About</Link>
-              <Link to='/abilities' className='nav-item'>Abilities</Link>
-              <Link to='/projects' className='nav-item'>Projects</Link>
-              <Link to='/products' className='nav-item'>Products</Link>
-              <Link to='/contact' className='nav-item'>Contact</Link>
+      <footer className='footer-container'>
+          <nav className='footer-navigation'>
+              <Link to='/' className='nav-item'>خانه</Link>
+              <Link to='/about' className='nav-item'>درباره ما</Link>
+              <Link to='/abilities' className='nav-item'>توانایی‌ها و خدمات</Link>
+              <Link to='/projects' className='nav-item'>پروژه‌ها</Link>
+              <Link to='/products' className='nav-item'>محصولات</Link>
+              <Link to='/contact' className='nav-item'>تماس با ما</Link>
           </nav>
-          <p>&copy; 2021 Ahrom Energy</p>
+          <h3>&copy; 2021 Ahrom Energy</h3>
       </footer>
   );
 }
@@ -33,7 +33,7 @@ function App() {
         <Body />
       </body>
       <footer>
-  
+          <Footer />
       </footer>
       
       
