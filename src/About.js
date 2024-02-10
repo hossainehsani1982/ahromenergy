@@ -1,13 +1,84 @@
+import React, { useState } from 'react';
+import './About.css';
+
+
+const strategyUl = `<ul>
+  <li>شناخت و پیش بینی نیازهای بازار</li>
+  <li>بسط حوزه فعالیت از ایران به کشورهای هم جوار</li>
+  <li>تلاش برای عملکرد بهتر از طریق مدیریت و اجرای پروژه های بهبود
+  </li>
+  <li>ورود به بازارهای جدید
+  </li>
+  <li>به کارگیری تکنولوژی های نوین با روش های تحقیق و توسعه و با انتقال تکنولوژی
+  </li>
+</ul>`;
+
+const valuesUl = `<ul>
+<li>یکپارچگی و هماهنگی
+</li>
+<li>نتیجه گرایی
+</li>
+<li>تعهد سازمانی                                      
+</li>
+<li>اعتبار و قابلیت پذیرش
+</li>
+<li>مسئولیت پذیری
+</li>
+<li>نوآوری
+</li>
+</ul>`;
+
+const data = [
+  { title: 'تاریخچه', text:`شرکت اهرم انرژی در سال۹۰  تاسیس گردید و از بدو تاسیس، فعالیت خود را به عنوان پیمانکار در بخش های مختلف مهندسی، تامین تجهیزات و اجرا آغاز نمود. کسب تجارب مختلف در اجرای پروژه های ملی در حوزه های نفت  گاز، پتروشیمی و صنایع درمدت فعالیت، این شرکت رابه عنوان یکی از شرکتهای پیمانکار EPC فعال مطرح نموده است که توانایی اجرای پروژه های بزرگ از مرحله مهندسی تا مرحله راه اندازی و تحویل به کارفرماو ارائه خدمات پس از فروش را دارد.
+  بهره گیری از دانش متخصصان کارآزموده و جوان و اصرار بر رعایت اصل تعهد و مسئولیت پذیری ضامن پویایی و موفقیت این شرکت در اجرای پروژه های صنعتی بوده است. بر همین اساس همکاری موثر با کارفرمایان و جلب رضایت ایشان در زمان اجرای پروژه ها و پس ازآن از نقاط قوت این شرکت محسوب گردیده که همراهی مشتریان و کارفرمایان در مراحل مختلف اجرای پروژه ها تا تحقق کامل تمامی اهداف پیش بینی شده در آنها را به دنبال داشته است.
+  شرکت اهرم انرژی ارائه خدمات با کیفیت مطلوب را وظیفه خود می داند و تلاش دارد بر اساس نیازمندیهای کارفرمایان خود ،با تکیه بر کنترل کیفیت، رعایت اصول ایمنی و برنامه زمانبندی، پروژه های محوله را در زمان مقرر به پایان رساند. 
+  شرکت اهرم انرژی در زمینه های طراحی و ساخت مخازن ذخیره و تحت فشار، خطوط انتقال، واحدهای تصفیه آب و فاضلاب  سیستم های پالایشگاهی، بازسازی و نوسازی پالایشگاهای موجود، صنایع پتروشیمی و شیمیایی، تولید بخار و نیرو، حفظ محیط زیست، بازرسی فنی و مدیریتMC  فعالیت دارد. 
+  شرکت اهرم انرژی در سال ١٣٩٥ و بعد از اجرای موفق چندین پروژه ساخت مخزن به عنوان سازنده مورد تایید شرکت مدیریت توسعه صنایع پتروشیمی (هولدینگ خلیج فارس) در لیست مورد تایید آن شرکت (AVL) قرار گرفته است.` },
+
+  { title: 'اهداف', text:`.ایجاد تشکیلات منسجم مبتنی بر دانش که پتانسیل لازم برای اجرای پروژه های کلان و استراتژیک را داشته و بتواند بر ثروت ملی کشور تاثیر گذار بوده وآنرا بطور محسوسی افزایش دهد .
+  ` },
+  {title: `ماموریت`, text: `ایجاد تشکیلات منسجم مبتنی بر دانش که پتانسیل لازم برای اجرای پروژه های کلان و استراتژیک را داشته و بتواند بر ثروت ملی کشور تاثیر گذار بوده وآنرا بطور محسوسی افزایش دهد .
+  `},
+  {title: `ارزش‌ها`, text: `<ul>${valuesUl}</ul>`},
+  {title: `استراتژی`, text: `<ul>${strategyUl}</ul>`},
+];
+
 function About() {
+  const [selected, setSelected] = useState(null);
+
+  const handleClick = (index) => {
+    if (selected === index) {
+      setSelected(null); // Close dropdown if clicked on the same item
+    } else {
+      setSelected(index);
+    }
+  };
+  const renderText = (text) => {
+    // Check if text starts with "<ul>"
+    if (text.startsWith('<ul>')) {
+      // Render as HTML using dangerouslySetInnerHTML
+      return <div dangerouslySetInnerHTML={{ __html: text, style : {textAlign:'right'}}} />;
+    } else {
+      // Render plain text
+      return <p>{text}</p>;
+    }
+  };
+
   return (
-    <div className='About'>
-      <h2>About</h2>
-      <p>
-        We are a company that specializes in energy solutions. We are a team of
-        engineers and scientists that are dedicated to providing the best energy
-        solutions for our clients. We are committed to providing the best
-        service and products to our clients.
-      </p>
+    <div className='about-container'>
+      <ul>
+        {data.map((item, index) => (
+          <li key={index} onClick={() => handleClick(index)}>
+            {item.title}
+            {selected === index && (
+              <div className='dropdown-content'>
+                <div className='dropdown-header' />
+                <p>{renderText(item.text)}</p>
+              </div>
+            )}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
