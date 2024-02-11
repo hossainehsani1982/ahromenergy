@@ -95,11 +95,24 @@
     .done-container {
         width: 100%;
         margin-left: 0;
+        flex-wrap: wrap;
     }
 
     .doing-container {
         width: 100%;
         margin-top: 20px;
         margin-right: 0;
+        flex-wrap: wrap;
     }
+    .inner-container{
+        flex-wrap: wrap;
+        height: 450px;
+        flex-grow: 1;
+    }
+
+    .inner-container img {
+        /* Prevent images from exceeding container width */
+        max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
+      }
 }
