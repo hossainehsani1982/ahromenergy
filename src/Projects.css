@@ -90,6 +90,7 @@
     .projects-container {
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .done-container {
@@ -104,14 +105,26 @@
         margin-right: 0;
         flex-wrap: wrap;
     }
+
+    
     .inner-container {
         display: flex; /* Ensure flexbox layout */
         flex-direction: row; /* Arrange children vertically */
         flex-wrap: wrap;
-        height: 600px; /* Set a fixed height */
+        height: 670px; /* Set a fixed height */
         flex-grow: 1; /* Allow vertical expansion */
         min-height: 0; /* Prevent collapsing when empty */
       }
+
+      .inner-container-body p{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     
       .inner-container img {
         max-width: 100%;
