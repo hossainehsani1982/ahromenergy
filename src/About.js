@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './About.css';
-
+import Helmet from 'react-helmet';
 
 const strategyUl = `<ul>
   <li>شناخت و پیش بینی نیازهای بازار</li>
@@ -66,6 +66,9 @@ function About() {
 
   return (
     <div className='about-container'>
+      <Helmet>
+        <title>اهرم انرژی | درباره ما</title>
+      </Helmet>
       <ul>
         {data.map((item, index) => (
           <li key={index} onClick={() => handleClick(index)}>

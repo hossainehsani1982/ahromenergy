@@ -1,4 +1,6 @@
 import './Projects.css';
+import React from 'react';
+import Helmet from 'react-helmet';
 
 const completedProjects = [
   {
@@ -78,8 +80,10 @@ const doingProjects = [
 
 function Projects() {
   return (
-
     <div className='projects-container'>
+        <Helmet>
+        <title>اهرم انرژی | پروژه‌ها</title>
+      </Helmet>
       <div className='done-container'>
         <div className='containers-header'>
           <h2>پروژه‌های انجام شده</h2>

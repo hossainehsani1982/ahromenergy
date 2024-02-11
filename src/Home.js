@@ -1,6 +1,7 @@
 import './Home.css';
 import './Body.css';
-
+import React from 'react';
+import Helmet from 'react-helmet';
 
 function Cards() {
   return (
@@ -72,7 +73,10 @@ function Home() {
   ]
   return (
     <div className="homeContainer">
-      <div className="imageSlider"></div>
+      <Helmet>
+        <title>اهرم انرژی | خانه</title>
+      </Helmet>
+      <div className="imageSlider"/>
       <div className="textContent">
         <Cards />
         <HomeProjects images={images} />

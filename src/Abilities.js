@@ -1,5 +1,6 @@
 import './Abilities.css';
-
+import React from 'react';
+import Helmet from 'react-helmet';
 
 const data = [
   {ulTile : `طراحی و مهندسی`, items : [`مطالعات اولیه`, `طراحی مقدماتی`, `طراحی تفضیلی`, `نظارت کارگاهی`, `آموزش`]},
@@ -12,6 +13,9 @@ const data = [
 function Abilities() {
   return (
     <div>
+      <Helmet>
+        <title>اهرم انرژی | توانایی ها و خدمات</title>
+      </Helmet>
       {data.map((item, index) => (
         <ul key={index}>
           <h2>{item.ulTile}</h2>

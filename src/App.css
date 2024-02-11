@@ -2,6 +2,7 @@
   flex-wrap: wrap;
   margin: 15px;
   direction: rtl;
+
 }
 
 
@@ -14,6 +15,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   position: absolute;
+  background-color: wheat;
 }
 
 .footer-container h3{

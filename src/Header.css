@@ -1,6 +1,7 @@
 .header-container {
   padding: 20px;
   direction: rtl;
+  background-color: wheat;
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -19,6 +20,12 @@
   box-shadow: none;
   justify-content: space-around;
   gap: 20px; /* Add spacing between nav items */
+}
+
+.nav-item {
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline below links */
 }
 
 @media screen and (max-width: 768px) {
