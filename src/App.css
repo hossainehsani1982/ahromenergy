@@ -25,6 +25,7 @@
   transition: font-size 0.3s ease;
   position: absolute; /* Position the element absolutely */
   bottom: 0; /* Align the element to the bottom */
+  flex-wrap: wrap;
 }
 
 
@@ -36,10 +37,18 @@
   gap: 20px; /* Add spacing between nav items */
 }
 
+.nav-item{
+  white-space: nowrap;
+}
+
 
 /* Add responsive styles for small screens */
 
 @media screen and (max-width: 768px) {
-   
+   .footer-navigation {
+    flex-direction: column;
+    align-items: right;
+    gap: 2px;
+   }
 }
 

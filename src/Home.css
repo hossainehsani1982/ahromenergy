@@ -29,6 +29,10 @@
 
 
 @media screen and (max-width: 768px) {
+  .homeContainer {
+    flex-direction: column;
+    /* Stack items vertically */
+  }
   .imageSlider {
     height: 200px;
     /* Adjust height for smaller screens */
@@ -104,13 +108,14 @@
 
 .projectsContainer {
   display: flex;
-  height: 400px;
+  min-height: 400px;
   background: linear-gradient(to right, rgb(216, 208, 183), rgb(142, 143, 119), rgb(216, 208, 183));
   justify-content: center;
   /* Center content horizontally */
   align-items: center;
   /* Center content vertically */
   flex-direction: column;
+  flex-wrap: wrap;
   border-radius: 5px;
   /* Stack items vertically */
   margin: 0;
