@@ -111,7 +111,7 @@
         display: flex; /* Ensure flexbox layout */
         flex-direction: row; /* Arrange children vertically */
         flex-wrap: wrap;
-        height: 670px; /* Set a fixed height */
+        height: 730px; /* Set a fixed height */
         flex-grow: 1; /* Allow vertical expansion */
         min-height: 0; /* Prevent collapsing when empty */
       }
